@@ -1,0 +1,19 @@
+<h2>Dodaj auto</h2>
+<form [formGroup]="carForm" (ngSubmit)="addCar()">
+  <label for="name">Marka:</label>
+  <input id="brand" formControlName="brand" required />
+
+  <label for="name">Model:</label>
+  <input id="model" formControlName="model" required />
+
+  <label for="name">Godina proizvodnje:</label>
+  <input id="year" formControlName="year" required />
+
+  <label for="type">Tip:</label>
+  <select id="type" formControlName="type" required>
+    <option value="DIESEL">Dizel</option>
+    <option value="SUPER">Benzin</option>
+  </select>
+
+  <button type="submit" [disabled]="carForm.invalid">Dodaj auto</button>
+</form>

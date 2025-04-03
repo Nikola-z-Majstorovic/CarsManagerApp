@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Lista automobila</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Godina</th>
+        <th>Akcije</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td>{{ car.brand }}</td>
+        <td>{{ car.model }}</td>
+        <td>{{ car.year }}</td>
+        <td>
+          <button (click)="deleteCar(car.id!)">Obriši</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Dodaj automobil</h3>
+  <!-- <input [(ngModel)]="newCar.brand" placeholder="Marka" />
+  <input [(ngModel)]="newCar.model" placeholder="Model" />
+  <input [(ngModel)]="newCar.year" type="number" placeholder="Godina" /> -->
+  <button (click)="goToAddCarForm()">Dodaj</button>
+</div>

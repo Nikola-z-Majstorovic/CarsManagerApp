@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
-import { FirstScreenComponent } from './pages/first-screen/first-screen.component';
+import { CarComponent } from './pages/car/car.component';
+import { AddCarComponent } from './pages/add-car/add-car.component';
 
 export const routes: Routes = [
   {
-    path: 'first-screen',
-    component: FirstScreenComponent,
+    path: 'cars',
+    component: CarComponent,
+  },
+  {
+    path: 'add-car',
+    component: AddCarComponent,
   },
 ];
 
