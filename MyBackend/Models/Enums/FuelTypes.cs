@@ -2,7 +2,7 @@
 {
     public enum FuelTypes
     {
-        DIESEL,
-        SUPER
+        DIESEL = 0, 
+        SUPER = 1
     }
 }

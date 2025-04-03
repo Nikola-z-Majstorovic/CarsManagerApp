@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\models\\enums\\fueltypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:models\\enums\\fueltypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\models\\entity\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:models\\entity\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\models\\entity\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|solutionrelative:models\\entity\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF58FB48-80CB-46BC-905F-81A7CFBFBD77}|MyBackend.csproj|c:\\users\\mnikola\\desktop\\test1\\carsmanagerapp\\mybackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Models\\Entity\\Car.cs",
               "RelativeDocumentMoniker": "Models\\Entity\\Car.cs",
               "ToolTip": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Models\\Entity\\Car.cs",
               "RelativeToolTip": "Models\\Entity\\Car.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T06:06:01.223Z",
               "IsPinned": true,
@@ -48,39 +48,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FuelTypes.cs",
               "DocumentMoniker": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Models\\Enums\\FuelTypes.cs",
               "RelativeDocumentMoniker": "Models\\Enums\\FuelTypes.cs",
               "ToolTip": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Models\\Enums\\FuelTypes.cs",
               "RelativeToolTip": "Models\\Enums\\FuelTypes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T07:12:05.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CarService.cs",
               "DocumentMoniker": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Services\\CarService.cs",
               "RelativeDocumentMoniker": "Services\\CarService.cs",
               "ToolTip": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Services\\CarService.cs",
               "RelativeToolTip": "Services\\CarService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwAsAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T06:04:44.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CarsController.cs",
               "DocumentMoniker": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Controllers\\CarsController.cs",
               "RelativeDocumentMoniker": "Controllers\\CarsController.cs",
               "ToolTip": "C:\\Users\\mnikola\\Desktop\\test1\\CarsManagerApp\\MyBackend\\Controllers\\CarsController.cs",
               "RelativeToolTip": "Controllers\\CarsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBoAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T06:00:27.262Z",
               "EditorCaption": ""
