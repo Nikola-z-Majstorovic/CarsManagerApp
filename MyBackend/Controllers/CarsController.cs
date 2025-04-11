@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyBackend.Models.Entity;
+using MyBackend.Models.Enums;
 using MyBackend.Services;
 
 namespace MyBackend.Controllers
@@ -14,7 +15,20 @@ namespace MyBackend.Controllers
         {
             _carService = carService;
         }
-   
+
+        [HttpGet("filter")]
+        public ActionResult<List<Car>> Filter([FromQuery] int? year, [FromQuery] FuelTypes? fuelType)
+        {
+            var filteredCars = _carService.GetAll();
+
+            if (year.HasValue)
+                filteredCars = filteredCars.Where(c => c.Year == year.Value).ToList();
+
+            if (fuelType.HasValue)
+                filteredCars = filteredCars.Where(c => c.FuelType == fuelType.Value).ToList();
+
+            return Ok(filteredCars);
+        }
 
         [HttpGet("", Name = "Get Cars")]
         public ActionResult<List<Car>> GetAll()
