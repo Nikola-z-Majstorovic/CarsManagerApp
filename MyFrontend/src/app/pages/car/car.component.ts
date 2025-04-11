@@ -4,16 +4,26 @@ import { Car } from '../../model/car';
 import { CommonModule } from '@angular/common';
 import { tap, catchError, of } from 'rxjs';
 import { Router } from '@angular/router';
+import { FuelTypes } from '../../model/enums/fuel-type';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-car',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './car.component.html',
   styleUrl: './car.component.css',
 })
 export class CarComponent {
   cars: Car[] = [];
+  newCar?: Car;
+
+  yearFilter: number | null = null;
+  fuelTypeFilter: FuelTypes | null = null;
+
+  FuelTypes = FuelTypes;
+  fuelTypeOptions = Object.values(FuelTypes);
+
   constructor(private carService: CarService, private router: Router) {}
 
   ngOnInit() {
@@ -36,18 +46,14 @@ export class CarComponent {
       });
   }
 
-  addCar() {
-    // if (this.newCar.brand && this.newCar.model) {
-    //   this.carService.addCar(this.newCar).subscribe(() => {
-    //     this.loadCars();
-    //     this.newCar = {
-    //       id: 0,
-    //       brand: '',
-    //       model: '',
-    //       year: new Date().getFullYear(),
-    //     };
-    //   });
-    // }
+  filterCars() {
+    const params: any = {};
+    if (this.yearFilter) params.year = this.yearFilter;
+    if (this.fuelTypeFilter) params.fuelType = this.fuelTypeFilter;
+
+    this.carService.getFilteredCars(params).subscribe((data) => {
+      this.cars = data;
+    });
   }
 
   deleteCar(id: number) {
@@ -55,6 +61,6 @@ export class CarComponent {
   }
 
   goToAddCarForm() {
-    this.router.navigate(['/add-car']); // Ruta ka formi
+    this.router.navigate(['/add-car']);
   }
 }

@@ -1,3 +1,4 @@
 export enum FuelTypes {
-    Disel, Super
+  DIESEL = 'DIESEL',
+  SUPER = 'SUPER',
 }

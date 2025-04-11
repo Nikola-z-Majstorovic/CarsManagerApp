@@ -13,12 +13,12 @@ form {
     margin-top: 5px;
   }
   
-  button {
+ button {
     margin-top: 15px;
-    padding: 10px;
-    background-color: #007bff;
+    background-color: red;
     color: white;
     border: none;
+    padding: 5px;
     cursor: pointer;
   }
   

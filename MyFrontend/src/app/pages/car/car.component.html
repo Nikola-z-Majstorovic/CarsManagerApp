@@ -1,5 +1,24 @@
 <div class="container">
   <h2>Lista automobila</h2>
+
+  <div class="filters" style="margin-bottom: 1rem">
+    <input
+      type="number"
+      [(ngModel)]="yearFilter"
+      placeholder="Godina"
+      class="filter-input"
+    />
+
+    <select [(ngModel)]="fuelTypeFilter" class="filter-input">
+      <option [ngValue]="null">-- Tip goriva --</option>
+      <option *ngFor="let ft of fuelTypeOptions" [ngValue]="ft">
+        {{ ft }}
+      </option>
+    </select>
+
+    <button (click)="filterCars()">Filtriraj</button>
+  </div>
+
   <table>
     <thead>
       <tr>

@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { Car } from '../../model/car';
 import { CarService } from '../../service/car.service';
+import { FuelTypes } from '../../model/enums/fuel-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-car',
@@ -19,7 +22,11 @@ export class AddCarComponent {
   carForm: FormGroup;
   id: number = 0;
 
-  constructor(private fb: FormBuilder, private carService: CarService) {
+  constructor(
+    private fb: FormBuilder,
+    private carService: CarService,
+    private router: Router
+  ) {
     this.carForm = this.fb.group({
       brand: ['', Validators.required],
       model: ['', Validators.required],
@@ -36,10 +43,15 @@ export class AddCarComponent {
         brand: this.carForm.value.brand,
         model: this.carForm.value.model,
         year: this.carForm.value.year,
-        fuelType: this.carForm.value.type,
+        fuelType:
+          this.carForm.value.fuelType === 'SUPER'
+            ? FuelTypes.SUPER
+            : FuelTypes.DIESEL,
       };
       console.log(newCar);
-      this.carService.addCar(newCar).subscribe();
+      this.carService
+        .addCar(newCar)
+        .subscribe((res) => this.router.navigate(['/cars']));
     }
   }
 }

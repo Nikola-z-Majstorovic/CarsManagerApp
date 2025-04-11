@@ -22,4 +22,9 @@ export class CarService {
   deleteCar(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+  getFilteredCars(params: any): Observable<Car[]> {
+    return this.http.get<Car[]>(`${this.apiUrl}/filter`, {
+      params,
+    });
+  }
 }
