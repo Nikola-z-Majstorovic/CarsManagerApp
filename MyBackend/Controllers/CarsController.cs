@@ -19,22 +19,14 @@ namespace MyBackend.Controllers
         [HttpGet("filter")]
         public ActionResult<List<Car>> Filter([FromQuery] int? year, [FromQuery] FuelTypes? fuelType)
         {
-            var filteredCars = _carService.GetAll();
-
-            if (year.HasValue)
-                filteredCars = filteredCars.Where(c => c.Year == year.Value).ToList();
-
-            if (fuelType.HasValue)
-                filteredCars = filteredCars.Where(c => c.FuelType == fuelType.Value).ToList();
-
+           var filteredCars = _carService.Filter(year, fuelType);
             return Ok(filteredCars);
         }
 
         [HttpGet("", Name = "Get Cars")]
         public ActionResult<List<Car>> GetAll()
         {
-            var cars = _carService.GetAll();
-            
+            var cars = _carService.GetAll();            
             return Ok(cars);
         }
         [HttpPost("", Name = "Create Car")]

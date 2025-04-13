@@ -1,29 +1,41 @@
-﻿using MyBackend.Models.Entity;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic.FileIO;
+using MyBackend.Models.Entity;
 using MyBackend.Models.Enums;
+using MyBackend.Repositores.Interfaces;
 
 namespace MyBackend.Services
 {
     public class CarService
     {
-        private List<Car> _cars = new List<Car>
-    {
-        new Car { Id = 1, Brand = "Toyota", Model = "Corolla", Year = 2020, FuelType =FuelTypes.SUPER },
-        new Car { Id = 2, Brand = "BMW", Model = "X5", Year = 2019, FuelType =FuelTypes.DIESEL },
-        new Car { Id = 3, Brand = "Audi", Model = "A4", Year = 2021 , FuelType =FuelTypes.DIESEL}
-    };
 
-        public List<Car> GetAll() => _cars;
+        private readonly ICarRepository _repository;
+
+        public CarService(ICarRepository repository)
+        {
+            _repository = repository;
+        }
+        public List<Car> GetAll() => _repository.GetAll();
 
         public void AddCar(Car car)
         {
-            car.Id = _cars.Max(c => c.Id) + 1;
-            _cars.Add(car);
+            _repository.AddCar(car);
         }
 
         public void DeleteCar(int id)
         {
-            var car = _cars.FirstOrDefault(c => c.Id == id);
-            if (car != null) _cars.Remove(car);
+            _repository.DeleteCar(id);
+        }
+
+        public List<Car> Filter(int? year, FuelTypes? fuelType)
+        {
+
+            if (year.HasValue)
+               return GetAll().Where(c => c.Year == year.Value).ToList();
+
+            if (fuelType.HasValue)
+                return GetAll().Where(c => c.FuelType == fuelType.Value).ToList();
+            return [];
         }
     }
 }

@@ -1,6 +1,25 @@
+using Microsoft.EntityFrameworkCore;
+using MyBackend.Context;
+using MyBackend.Repositores;
+using MyBackend.Repositores.Interfaces;
 using MyBackend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Registruj ICarRepository na osnovu podešavanja
+var repoType = builder.Configuration["RepositoryType"];
+
+if (repoType == "Database")
+{
+    builder.Services.AddScoped<ICarRepository, CarRepository>();
+}
+else
+{
+    builder.Services.AddSingleton<ICarRepository, InMemoryCarRepository>();
+}
 
 // Add services to the container.
 
